@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="search">搜索</string>
+    <string name="searching">请输入内容...</string>
+    <string name="search1">距离排序</string>
+    <string name="search2">信誉排序</string>
+    <string name="search3">医院排序</string>
+    <string name="myDoctor">曾经陪过我的医生</string>
+    <string name="test">测试</string>
+    <string name="chat">聊天</string>
+    <string name="chooseDoctor">医生</string>
+    <string name="pet">宠物</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="pet_diary">点我查看主人的心情日记吧~</string>
+    <string name="pet_suggest">累了就看看我吧</string>
+    <string name="pet_chat">一起来聊天吧~</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="friend_name">Biao</string>
+    <string name="default_message">[Audio]</string>
+    <string name="unkown_name">未知用户</string>
+    <string name="default_time">12:12</string>
+</resources>

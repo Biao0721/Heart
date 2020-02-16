@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/floralwhite"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/mainColor">
+
+        <Button
+            android:id="@+id/search_main"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:background="@drawable/main_function_button"
+            android:layout_marginTop="@dimen/search_main"
+            android:layout_marginBottom="@dimen/search_main"
+            android:layout_marginLeft="@dimen/search_main"
+            android:layout_marginRight="@dimen/search_main"
+            android:drawableLeft="@mipmap/search"
+            android:padding="@dimen/search_main"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/add"
+            android:background="@color/mainColor"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/more"
+            android:background="@color/mainColor"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <include layout="@layout/title"></include>
+
+</LinearLayout>

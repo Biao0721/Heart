@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/titile_chat"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@mipmap/title_chat"
+        android:background="@drawable/main_function_button"/>
+
+
+    <ImageButton
+        android:id="@+id/titile_pet"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@mipmap/title_pet"
+        android:background="@drawable/main_function_button"/>
+
+
+    <ImageButton
+        android:id="@+id/title_doctor"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@mipmap/title_doctor"
+        android:background="@drawable/main_function_button"/>
+
+    <ImageButton
+        android:id="@+id/title_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@mipmap/title_home"
+        android:background="@drawable/main_function_button"/>
+</LinearLayout>

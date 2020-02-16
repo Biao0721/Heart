@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/doctor_head_img"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@mipmap/doctor"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="医生基本信息"
+            android:drawableLeft="@mipmap/man"/>
+
+        <TextView
+            android:id="@+id/doctor_field"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="医生擅长领域：1.XXX 2.XXX 3.XXX "
+            android:drawableLeft="@mipmap/fame"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/doctor_information"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="医生相关评价"
+                android:drawableLeft="@mipmap/assess"/>
+
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
