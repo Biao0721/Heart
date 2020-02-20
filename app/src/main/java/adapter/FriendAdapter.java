@@ -57,7 +57,7 @@ public class FriendAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         Map<String, Object> friend = data.get(i);
-        Widget widget = null;
+        Widget widget;
         if (view == null){
             widget = new Widget();
             // 实例化组件

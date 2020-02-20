@@ -3,21 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp">
 
     <ImageView
         android:id="@+id/doctor_head_img"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:src="@mipmap/doctor"
         android:padding="10dp"/>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="4"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp">
 
         <TextView
             android:id="@+id/doctor_name"
@@ -25,7 +29,8 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:text="医生基本信息"
-            android:drawableLeft="@mipmap/man"/>
+            android:drawableLeft="@mipmap/man"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/doctor_field"
@@ -33,20 +38,20 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:text="医生擅长领域：1.XXX 2.XXX 3.XXX "
-            android:drawableLeft="@mipmap/fame"/>
+            android:drawableLeft="@mipmap/fame"
+            android:textColor="@color/paleturquoise" />
 
-        <ScrollView
+        <TextView
+            android:id="@+id/doctor_information"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3">
+            android:layout_height="0sp"
+            android:layout_weight="3"
+            android:text="医生相关评价"
+            android:drawableLeft="@mipmap/assess"
+            android:singleLine="true"
+            android:lines="2"
+            android:ellipsize="end"
+            android:textColor="@color/black"/>
 
-            <TextView
-                android:id="@+id/doctor_information"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="医生相关评价"
-                android:drawableLeft="@mipmap/assess"/>
-
-        </ScrollView>
     </LinearLayout>
 </LinearLayout>

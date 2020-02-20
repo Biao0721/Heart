@@ -6,20 +6,19 @@
     android:layout_height="wrap_content">
 
     <ImageButton
-        android:id="@+id/titile_chat"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:src="@mipmap/title_chat"
-        android:background="@drawable/main_function_button"/>
-
-
-    <ImageButton
         android:id="@+id/titile_pet"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:src="@mipmap/title_pet"
+        android:background="@drawable/main_function_button"/>
+
+    <ImageButton
+        android:id="@+id/titile_chat"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@mipmap/title_chat"
         android:background="@drawable/main_function_button"/>
 
 

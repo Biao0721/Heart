@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/lightgray">
 
     <ListView
         android:id="@+id/friend_list"
@@ -13,61 +14,40 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="为你推荐"
-            android:textSize="35dp"
-            android:gravity="fill_vertical"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="用户_1"
+            android:textSize="15dp"
+            android:drawableLeft="@mipmap/people_suggest"
+            android:background="@drawable/main_doctor"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="用户_1"
-                android:textSize="15dp"
-                android:drawableLeft="@mipmap/people_suggest"
-                android:background="@drawable/main_doctor"
-                android:padding="10dp"
-                android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="用户_2"
+            android:textSize="15dp"
+            android:drawableLeft="@mipmap/people_suggest"
+            android:background="@drawable/main_doctor"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"/>
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="用户_2"
-                android:textSize="15dp"
-                android:drawableLeft="@mipmap/people_suggest"
-                android:background="@drawable/main_doctor"
-                android:padding="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="用户_3"
-                android:textSize="15dp"
-                android:drawableLeft="@mipmap/people_suggest"
-                android:background="@drawable/main_doctor"
-                android:padding="10dp"/>
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.5"
-            android:src="@mipmap/pet_3"
-            android:layout_marginRight="200dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="用户_3"
+            android:textSize="15dp"
+            android:drawableLeft="@mipmap/people_suggest"
+            android:background="@drawable/main_doctor"
+            android:padding="10dp"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -18,15 +18,15 @@ import fragement.Pet;
 public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
 
-    private ImageButton btnChat;
     private ImageButton btnPet;
+    private ImageButton btnChat;
     private ImageButton btnDoctor;
     private ImageButton btnHome;
 
-    private Chat chatFragement;
-    private Pet petFragement;
+    private Pet    petFragement;
+    private Chat   chatFragement;
     private Doctor doctorFragement;
-    private Home homeFragement;
+    private Home   homeFragement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
         Init();
 
-        //默认开始界面在聊天界面
+        //默认开始界面在功能界面
         InitFragment(1);
-        btnChat.setImageResource(R.mipmap.title_chat_choose);
+        btnPet.setImageResource(R.mipmap.title_pet_choose);
     }
 
     private void InitFragment(int flag){
@@ -55,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
         hideAllFragment(transaction);
         switch (flag){
             case 1:
+                if (petFragement== null){
+                    petFragement = new Pet();
+                    transaction.add(R.id.fragement,petFragement);
+                }
+                else{
+                    transaction.show(petFragement);
+                }
+                break;
+
+            case 2:
                 if (chatFragement== null){
                     chatFragement = new Chat();
                     transaction.add(R.id.fragement,chatFragement);
@@ -64,15 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
 
-            case 2:
-                if (petFragement== null){
-                    petFragement = new Pet();
-                    transaction.add(R.id.fragement,petFragement);
-                }
-                else{
-                    transaction.show(petFragement);
-                }
-                break;
 
             case 3:
                 if (doctorFragement== null){
@@ -99,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void Init(){
-        btnChat   = findViewById(R.id.titile_chat);
         btnPet    = findViewById(R.id.titile_pet);
+        btnChat   = findViewById(R.id.titile_chat);
         btnDoctor = findViewById(R.id.title_doctor);
         btnHome   = findViewById(R.id.title_home);
         setListeners();
@@ -108,8 +109,8 @@ public class MainActivity extends AppCompatActivity {
 
     void setListeners(){
         OnClick onClick = new OnClick();
-        btnChat.setOnClickListener(onClick);
         btnPet.setOnClickListener(onClick);
+        btnChat.setOnClickListener(onClick);
         btnDoctor.setOnClickListener(onClick);
         btnHome.setOnClickListener(onClick);
     }
@@ -122,19 +123,19 @@ public class MainActivity extends AppCompatActivity {
 
             switch (view.getId()){
 
-                case R.id.titile_chat:
-                    Toast.makeText(MainActivity.this,
-                            "You clicked Chat",Toast.LENGTH_SHORT).show();
-                    //跳转到Chat界面
-                    btnChat.setImageResource(R.mipmap.title_chat_choose);
-                    InitFragment(1);
-                    break;
-
                 case R.id.titile_pet:
                     Toast.makeText(MainActivity.this,
                             "You clicked Pet",Toast.LENGTH_SHORT).show();
                     //跳转到Pet界面
                     btnPet.setImageResource(R.mipmap.title_pet_choose);
+                    InitFragment(1);
+                    break;
+
+                case R.id.titile_chat:
+                    Toast.makeText(MainActivity.this,
+                            "You clicked Chat",Toast.LENGTH_SHORT).show();
+                    //跳转到Chat界面
+                    btnChat.setImageResource(R.mipmap.title_chat_choose);
                     InitFragment(2);
                     break;
 
@@ -158,12 +159,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void hideAllFragment(FragmentTransaction transaction){
-        if (chatFragement!= null){
-            transaction.hide(chatFragement);
-        }
-
         if (petFragement!= null){
             transaction.hide(petFragement);
+        }
+
+        if (chatFragement!= null){
+            transaction.hide(chatFragement);
         }
 
         if (doctorFragement!= null){
@@ -179,8 +180,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void restartButton(){
         //设置为未点击状态
-        btnChat.setImageResource(R.mipmap.title_chat);
         btnPet.setImageResource(R.mipmap.title_pet);
+        btnChat.setImageResource(R.mipmap.title_chat);
         btnDoctor.setImageResource(R.mipmap.title_doctor);
         btnHome.setImageResource(R.mipmap.title_home);
     }

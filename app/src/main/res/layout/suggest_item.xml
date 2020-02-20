@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:padding="5dp"
+    android:background="@color/white"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/suggest_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="如何治愈抑郁的你?"
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/suggest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/unkown_name"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/suggest_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="心理医生"
+            android:layout_marginLeft="@dimen/item_margin_left_10dp"
+            android:gravity="center"
+            android:textColor="@color/red"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/suggest_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="详细内容..."
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:lines="2"
+        android:ellipsize="end"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

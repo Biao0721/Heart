@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/item_height">
+    android:layout_height="@dimen/item_height"
+    android:background="@color/white">
 
     <FrameLayout
         android:id="@+id/friend_head"
@@ -48,7 +49,7 @@
             android:text="@string/friend_name"
             android:layout_marginTop="@dimen/margin"
             android:textColor="@color/black"
-            android:textSize="@dimen/content_text_16sp" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/friend_lastmsg"
@@ -58,7 +59,7 @@
             android:layout_weight="1"
             android:layout_gravity="bottom"
             android:text="@string/default_message"
-            android:textSize="@dimen/content_text_14sp" />
+            android:textSize="10dp" />
 
     </LinearLayout>
 

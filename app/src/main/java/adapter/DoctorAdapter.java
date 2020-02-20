@@ -13,14 +13,17 @@ import com.example.demo.R;
 import java.util.List;
 import java.util.Map;
 
+import data.DoctorData;
+
 public class DoctorAdapter extends BaseAdapter {
+
     private List<Map<String, Object>> data;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public DoctorAdapter(Context context, List<Map<String, Object>> data){
+    public DoctorAdapter(Context context){
         this.context = context;
-        this.data = data;
+        this.data = new DoctorData().getData();
         this.layoutInflater = LayoutInflater.from(context);
     }
 
@@ -52,8 +55,8 @@ public class DoctorAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        Widget widget = null;
-
+        Map<String, Object> doctor = data.get(i);
+        Widget widget;
         if (view == null){
             widget = new Widget();
             // 实例化组件
@@ -72,7 +75,6 @@ public class DoctorAdapter extends BaseAdapter {
         widget.doctorName.setText((String)data.get(i).get("doctor_name"));
         widget.doctorFirld.setText((String)data.get(i).get("doctor_field"));
         widget.doctorInformation.setText((String)data.get(i).get("doctor_information"));
-
         return view;
     }
 }
