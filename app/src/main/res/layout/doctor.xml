@@ -6,9 +6,17 @@
     android:orientation="vertical"
     android:background="@color/lightgray">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:src="@mipmap/hospital_map"
+        android:layout_marginTop="10dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
         android:background="@drawable/app_test"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -45,20 +53,6 @@
             android:background="@color/floralwhite"
             android:padding="10dp"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/myDoctor"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:text="@string/myDoctor"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:background="@drawable/button_style"
-        android:textColor="#ffffff"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="10dp"/>
 
     <ListView
         android:id="@+id/doctor_list"

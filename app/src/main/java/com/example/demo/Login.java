@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -51,9 +52,12 @@ public class Login extends AppCompatActivity {
     private boolean login(){
         String userText = usernameET.getText().toString();
         String passwordText = passwordET.getText().toString();
-
+        Log.d("User",userText);
+        Log.d("Userpassword",passwordText);
         for(int i = 0; i < user.size(); i++){
-            if(user.get(i).getAccountNumber().equals(userText) ){
+            Log.d("Data", user.get(i).getAccountNumber());
+            if(user.get(i).getAccountNumber().equals(userText)){
+                Log.d("Data", user.get(i).getPassword());
                 if(user.get(i).getPassword().equals(passwordText)){
                     setUser(user.get(i));
                     Toast.makeText(Login.this,"登录成功...",Toast.LENGTH_SHORT).show();

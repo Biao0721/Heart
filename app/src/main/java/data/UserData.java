@@ -40,7 +40,7 @@ public class UserData {
         setUser();
     }
 
-    public void addUser(String accountNumber, String userName, String password, String gender, String phone){
+    public void addUser(String accountNumber, String password, String userName, String gender, String phone){
         userList.put(this.userList.size() + 1, new User(accountNumber, password, userName, gender, phone));
     }
 

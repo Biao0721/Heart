@@ -30,13 +30,13 @@
     <string name="unkown_name">未知用户</string>
     <string name="default_time">12:12</string>
 
-    <string name="sad0">抑郁</string>
-    <string name="sad1">焦虑</string>
-    <string name="sad2">强迫症</string>
-    <string name="sad3">神经衰弱</string>
-    <string name="sad4">社交恐惧症</string>
-    <string name="sad5">人格障碍</string>
-    <string name="sad6">应激障碍</string>
+    <string name="sad0">失眠</string>
+    <string name="sad1">梦游</string>
+    <string name="sad2">易怒</string>
+    <string name="sad3">易焦虑</string>
+    <string name="sad4">消极自卑</string>
+    <string name="sad5">社交恐惧</string>
+    <string name="sad6">无故低落</string>
     <string name="sad7">所有分类</string>
 
 </resources>

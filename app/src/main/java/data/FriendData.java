@@ -20,31 +20,25 @@ public class FriendData {
          // 用户头像
         headImgRes = new int[]{
                 R.drawable.head_image_1, R.drawable.head_image_2,
-                R.drawable.head_image_3, R.drawable.head_image_4,
-                R.drawable.head_image_5, R.drawable.head_image_6,
-                R.drawable.head_image_7, R.drawable.head_image_8,
-                R.drawable.head_image_9, R.drawable.head_image_10};
+                R.drawable.head_image_3, R.drawable.head_image_4,};
 
         // 用户昵称
         usernames = new String[]{
                 "KikiCaq", "Xiao.D", "鲸落故里",
-                "nienieeeee", "s-like_you", "Biao",
-                "AhuFiona", "Fiona", "皮皮", "4EVER"};
+                "nienieeeee", };
 
         //最新消息
         lastMsgs = new String[]{
                 "你真棒！", "加油！你可以的", "男神你好帅！", "嘿嘿嘿嘿嘿...",
-                "Fight...", "你能到大的，比想象...", "冲冲冲!",
-                "[Video Call]", "什么东西？", "[Audio]"};
+                "Fight..."};
 
         // 消息时间
         lastMsgTimes = new String[]{
                 "17:40", "10:56", "7月26日",
-                "昨天", "7月27日", "09:46",
-                "7月18日", "星期一", "7月26日", "4月23日"};
+                "昨天", };
 
         // 未读消息
-        isReads = new String[]{"0", "3", "0", "1", "5", "1", "2", "0", "3", "3"};
+        isReads = new String[]{"0", "3", "0", "1"};
 
         for(int i = 0; i < usernames.length; i++){
             Map<String, Object> showItem = new HashMap<>();

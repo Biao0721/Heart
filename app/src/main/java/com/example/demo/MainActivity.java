@@ -124,32 +124,24 @@ public class MainActivity extends AppCompatActivity {
             switch (view.getId()){
 
                 case R.id.titile_pet:
-                    Toast.makeText(MainActivity.this,
-                            "You clicked Pet",Toast.LENGTH_SHORT).show();
                     //跳转到Pet界面
                     btnPet.setImageResource(R.mipmap.title_pet_choose);
                     InitFragment(1);
                     break;
 
                 case R.id.titile_chat:
-                    Toast.makeText(MainActivity.this,
-                            "You clicked Chat",Toast.LENGTH_SHORT).show();
                     //跳转到Chat界面
                     btnChat.setImageResource(R.mipmap.title_chat_choose);
                     InitFragment(2);
                     break;
 
                 case R.id.title_doctor:
-                    Toast.makeText(MainActivity.this,
-                            "You clicked Doctor",Toast.LENGTH_SHORT).show();
                     //跳转到Doctor界面
                     btnDoctor.setImageResource(R.mipmap.title_doctor_choose);
                     InitFragment(3);
                     break;
 
                 case R.id.title_home:
-                    Toast.makeText(MainActivity.this,
-                            "You clicked Home",Toast.LENGTH_SHORT).show();
                     //跳转到Home界面
                     btnHome.setImageResource(R.mipmap.title_home_choose);
                     InitFragment(4);

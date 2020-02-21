@@ -3,7 +3,9 @@ package com.example.demo;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,7 +54,6 @@ public class Register extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup Group, int Checkid) {
                 // TODO Auto-generated method stub
                 //设置TextView的内容显示CheckBox的选择结果
-                String str;
                 RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
                 gender = radioButton.getText().toString();
             }
@@ -61,13 +62,18 @@ public class Register extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (passwordTX.getText().equals(_passwordTX.getText())){
+                Log.d("password", passwordTX.getText().toString());
+                Log.d("_password", _passwordTX.getText().toString());
+                if (passwordTX.getText().toString().equals(_passwordTX.getText().toString())){
                     new UserData().addUser(
                             accountNumberTX.getText().toString(),
-                            userNameTX.getText().toString(),
                             passwordTX.getText().toString(),
+                            userNameTX.getText().toString(),
                             gender,
                             phoneTX.getText().toString());
+                    Intent intent = new Intent();
+                    intent.setClass(Register.this, Login.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(Register.this, "两次输入密码不一致", Toast.LENGTH_SHORT).show();
                 }
