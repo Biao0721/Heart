@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Suggest"></activity>
-        <activity android:name=".ChatContent"></activity>
-        <activity android:name=".Login"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Register"></activity>
+        <activity android:name=".Suggest" />
+        <activity android:name=".ChatContent" />
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

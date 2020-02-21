@@ -10,19 +10,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+import data.User;
+import data.UserData;
+
 public class Login extends AppCompatActivity {
-    List<Map<String, String>> user = new ArrayList<>();
+    private Map<Integer, User> user;
 
     private EditText usernameET;
     private EditText passwordET;
     private Button loginBtn;
+    private Button registerBtn;
 
-    public static String name = "未登录";
+    public static User userItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,36 +36,15 @@ public class Login extends AppCompatActivity {
             actionBar.hide();
         }
 
-        setUser();
+        user = new UserData().getUser();
         init();
     }
 
-    private void setUser(){
-        String[] accountNumber = {
-                "KonDBin", "LinSSi", "HuJinHao", "LuSY", "LeeYanN", "SunXiao", "HanXueQiao"
-        };
-
-        String[] userName = {
-                "孔德彬", "林思思", "胡锦浩", "卢思怡", "李妍霓", "孙潇", "韩雪侨"
-        };
-
-        String[] password = {
-                "123", "123", "123", "123", "123", "123", "123"
-        };
-
-        for(int i = 0; i < accountNumber.length; i++){
-            Map<String, String> userItem = new HashMap<>();
-            userItem.put("account_number", accountNumber[i]);
-            userItem.put("password", password[i]);
-            userItem.put("user_name", userName[i]);
-            user.add(userItem);
-        }
-    }
-
     private void init(){
-        usernameET = findViewById(R.id.user);
-        passwordET = findViewById(R.id.password);
-        loginBtn   = findViewById(R.id.login);
+        usernameET  = findViewById(R.id.user);
+        passwordET  = findViewById(R.id.password);
+        loginBtn    = findViewById(R.id.login);
+        registerBtn = findViewById(R.id.login_register);
         setListeners();
     }
 
@@ -73,11 +53,10 @@ public class Login extends AppCompatActivity {
         String passwordText = passwordET.getText().toString();
 
         for(int i = 0; i < user.size(); i++){
-            if(user.get(i).get("account_number").equals(userText) ){
-                if(user.get(i).get("password").equals(passwordText)){
-                    setName(user.get(i).get("user_name"));
+            if(user.get(i).getAccountNumber().equals(userText) ){
+                if(user.get(i).getPassword().equals(passwordText)){
+                    setUser(user.get(i));
                     Toast.makeText(Login.this,"登录成功...",Toast.LENGTH_SHORT).show();
-
                     return true;
                 } else {
                     passwordET.setText("");
@@ -103,9 +82,17 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(Login.this, Register.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    private static void setName(String _name){
-        name = _name;
+    private static void setUser(User _userItem){
+        userItem = _userItem;
     }
 }
