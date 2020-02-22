@@ -8,19 +8,19 @@ public class UserData {
     Map<Integer, User> userList = new HashMap<>();
 
     private String[] accountNumber = {
-            "KonDBin", "LinSSi", "HuJinHao", "LuSY", "LeeYanN", "SunXiao", "HanXueQiao"
+            "KonDBin", "LinSSi", "HuJinHao", "LuSY", "LeeYanN", "SunXiao", "HanXueQiao", "123"
     };
 
     private String[] userName = {
-            "孔德彬", "林思思", "胡锦浩", "卢思怡", "李妍霓", "孙潇", "韩雪侨"
+            "孔德彬", "林思思", "胡锦浩", "卢思怡", "李妍霓", "孙潇", "韩雪侨", "致郁患者"
     };
 
     private String[] password = {
-            "123", "123", "123", "123", "123", "123", "123"
+            "123", "123", "123", "123", "123", "123", "123", "123"
     };
 
     private String[] gender = {
-            "男", "女", "男", "女", "女", "女", "女"
+            "男", "女", "男", "女", "女", "女", "女", "男"
     };
 
     private String[] phone = {
